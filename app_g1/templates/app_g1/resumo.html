@@ -1,0 +1,17 @@
+{% if user.is_authenticated %}
+    <p class="logged-in-p">
+        Olá {{ user.username }} seja bem vindo, o que você quer doido?
+        <span class="sair"><a href="{% url 'logout' %}">Sair</a></span>
+    </p>
+{% endif %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumo dos Processos</title>
+</head>
+<body>
+<h1>Resumo dos Processos</h1>
+<p>Quantidade de Processos: {{ total }}.</p>
+</body>
+</html>
